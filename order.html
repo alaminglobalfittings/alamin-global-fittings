@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order - Alamin Global Fittings</title>
+
+    <meta name="description"
+          content="Place an order with Alamin Global Fittings for quality furniture fittings, accessories and furniture contracts in Kuje, Abuja.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                ALAMIN <span>GLOBAL FITTINGS</span>
+            </a>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="order.html" class="active">Order Now</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- Order Section -->
+    <main>
+
+        <section class="order">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p>PLACE AN ORDER</p>
+
+                    <h2>Order From Alamin Global Fittings</h2>
+
+                    <span>
+                        Tell us what you need and we'll get back to you.
+                    </span>
+
+                </div>
+
+
+                <form id="orderForm" class="order-form">
+
+                    <!-- Customer Information -->
+
+                    <div class="form-section">
+
+                        <h3>Customer Information</h3>
+
+                        <div class="form-group">
+
+                            <label for="customerName">
+                                Full Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                name="customerName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone Number *
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="08012345678"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="example@email.com"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="address">
+                                Delivery Address *
+                            </label>
+
+                            <textarea
+                                id="address"
+                                name="address"
+                                rows="3"
+                                placeholder="Enter your delivery address"
+                                required
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Order Information -->
+
+                    <div class="form-section">
+
+                        <h3>Order Information</h3>
+
+                        <div id="orderItems">
+
+                            <div class="order-item">
+
+                                <div class="form-group">
+
+                                    <label>
+                                        Item / Product *
+                                    </label>
+
+                                    <select class="item-name" required>
+
+                                        <option value="">
+                                            Select a product
+                                        </option>
+
+                                        <option value="MDF Board">
+                                            MDF Board
+                                        </option>
+
+                                        <option value="Plywood">
+                                            Plywood
+                                        </option>
+
+                                        <option value="Floating Panels">
+                                            Floating Panels
+                                        </option>
+
+                                        <option value="Drawer Runners">
+                                            Drawer Runners
+                                        </option>
+
+                                        <option value="Cabinet Hinges">
+                                            Cabinet Hinges
+                                        </option>
+
+                                        <option value="Handles">
+                                            Handles
+                                        </option>
+
+                                        <option value="Screws">
+                                            Screws
+                                        </option>
+
+                                        <option value="Nails & Pins">
+                                            Nails & Pins
+                                        </option>
+
+                                        <option value="PVC Edge Bands">
+                                            PVC Edge Bands
+                                        </option>
+
+                                        <option value="Other / Not Listed">
+                                            Other / Not Listed
+                                        </option>
+
+                                    </select>
+
+
+                                    <input
+                                        type="text"
+                                        class="other-product"
+                                        placeholder="Please specify the product you need"
+                                        style="display: none;"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-row">
+
+                                    <div class="form-group">
+
+                                        <label>
+                                            Quantity *
+                                        </label>
+
+                                        <input
+                                            type="number"
+                                            class="item-quantity"
+                                            min="1"
+                                            placeholder="Quantity"
+                                            required
+                                        >
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label>
+                                            Size / Specification
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="item-specification"
+                                            placeholder="Example: 16 inch, black"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="addItem"
+                            class="add-item-btn">
+                            + Add Another Item
+                        </button>
+
+
+                        <div class="form-group">
+
+                            <label for="details">
+                                Additional Order Details
+                            </label>
+
+                            <textarea
+                                id="details"
+                                name="details"
+                                rows="4"
+                                placeholder="Any other information about your order..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="order-submit">
+                        Place Order on WhatsApp
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 Alamin Global Fittings. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        const orderItems = document.getElementById("orderItems");
+        const addItem = document.getElementById("addItem");
+
+        /*
+         * Show the "Other Product" field when
+         * Other / Not Listed is selected.
+         */
+        function setupProductSelect(item) {
+
+            const select = item.querySelector(".item-name");
+            const otherProduct = item.querySelector(".other-product");
+
+            select.addEventListener("change", function () {
+
+                if (this.value === "Other / Not Listed") {
+
+                    otherProduct.style.display = "block";
+                    otherProduct.required = true;
+
+                } else {
+
+                    otherProduct.style.display = "none";
+                    otherProduct.required = false;
+                    otherProduct.value = "";
+
+                }
+
+            });
+
+        }
+
+
+        setupProductSelect(
+            document.querySelector(".order-item")
+        );
+
+
+        /*
+         * Add another product.
+         */
+        addItem.addEventListener("click", function () {
+
+            const firstItem =
+                document.querySelector(".order-item");
+
+            const newItem =
+                firstItem.cloneNode(true);
+
+            newItem
+                .querySelector(".item-name")
+                .value = "";
+
+            newItem
+                .querySelector(".item-quantity")
+                .value = "";
+
+            newItem
+                .querySelector(".item-specification")
+                .value = "";
+
+            newItem
+                .querySelector(".other-product")
+                .value = "";
+
+            newItem
+                .querySelector(".other-product")
+                .style.display = "none";
+
+            newItem
+                .querySelector(".other-product")
+                .required = false;
+
+
+            orderItems.appendChild(newItem);
+
+            setupProductSelect(newItem);
+
+        });
+
+
+        /*
+         * Send the completed order to WhatsApp.
+         */
+        document
+            .getElementById("orderForm")
+            .addEventListener("submit", function (event) {
+
+                event.preventDefault();
+
+
+                const customerName =
+                    document.getElementById("customerName").value;
+
+                const phone =
+                    document.getElementById("phone").value;
+
+                const email =
+                    document.getElementById("email").value;
+
+                const address =
+                    document.getElementById("address").value;
+
+                const details =
+                    document.getElementById("details").value;
+
+
+                let message =
+                    "Hello Alamin Global Fittings,%0A%0A" +
+                    "I would like to place an order.%0A%0A" +
+
+                    "CUSTOMER INFORMATION%0A" +
+                    "Name: " +
+                    encodeURIComponent(customerName) +
+                    "%0A" +
+
+                    "Phone: " +
+                    encodeURIComponent(phone) +
+                    "%0A" +
+
+                    "Email: " +
+                    encodeURIComponent(email) +
+                    "%0A" +
+
+                    "Delivery Address: " +
+                    encodeURIComponent(address) +
+                    "%0A%0A" +
+
+                    "ORDER INFORMATION%0A";
+
+
+                const items =
+                    document.querySelectorAll(".order-item");
+
+
+                items.forEach(function (item, index) {
+
+                    const select =
+                        item.querySelector(".item-name");
+
+                    const other =
+                        item.querySelector(".other-product");
+
+                    const quantity =
+                        item.querySelector(".item-quantity");
+
+                    const specification =
+                        item.querySelector(".item-specification");
+
+
+                    let productName = select.value;
+
+                    if (
+                        productName ===
+                        "Other / Not Listed"
+                    ) {
+                        productName = other.value;
+                    }
+
+
+                    message +=
+                        "%0AItem " +
+                        (index + 1) +
+                        ": " +
+                        encodeURIComponent(productName) +
+
+                        "%0AQuantity: " +
+                        encodeURIComponent(quantity.value) +
+
+                        "%0ASize / Specification: " +
+                        encodeURIComponent(specification.value) +
+                        "%0A";
+
+                });
+
+
+                message +=
+                    "%0AAdditional Details:%0A" +
+                    encodeURIComponent(details);
+
+
+                /*
+                 * ALAMIN Global Fittings
+                 * Business WhatsApp:
+                 * 09121293089
+                 *
+                 * International format:
+                 * 2349121293089
+                 */
+
+                window.open(
+                    "https://wa.me/2349121293089?text=" +
+                    message,
+                    "_blank"
+                );
+
+            });
+
+    </script>
+
+
+</body>
+  </html>
