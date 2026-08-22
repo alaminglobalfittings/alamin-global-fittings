@@ -158,8 +158,16 @@ orderForm.addEventListener("submit", function (event) {
 
     items.forEach(function (item, index) {
 
-        const name =
-            item.querySelector(".item-name").value.trim();
+        const productSelect =
+    item.querySelector(".item-name");
+
+const otherProduct =
+    item.querySelector(".other-product");
+
+const name =
+    productSelect.value === "Other / Not Listed"
+        ? otherProduct.value.trim()
+        : productSelect.value;
 
         const quantity =
             item.querySelector(".item-quantity").value.trim();
