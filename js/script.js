@@ -201,12 +201,12 @@ Delivery Address:
 ${address}
 
 *ORDER ITEMS*
-${orderList}
+${orderList}${details ? `
 
-${details ? `*ADDITIONAL DETAILS*
-${details}
+*ADDITIONAL DETAILS*
+${details}` : ""}
 
-` : ""}Please confirm availability, prices and delivery arrangements.
+Please confirm availability, prices and delivery arrangements.
 
 Thank you.`;
 
