@@ -124,7 +124,8 @@ function setupProductSelector(item) {
 
     });
 
-}document.querySelectorAll(".order-item").forEach(function (item) {
+}
+document.querySelectorAll(".order-item").forEach(function (item) {
     setupProductSelector(item);
 });
 // Submit order
