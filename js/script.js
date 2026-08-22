@@ -19,7 +19,7 @@ addItemButton.addEventListener("click", function () {
                 Item / Product *
             </label>
 
-            <input
+            
 <select class="item-name" required>
     <option value="">Select a product</option>
     <option value="MDF Board">MDF Board</option>
@@ -33,7 +33,12 @@ addItemButton.addEventListener("click", function () {
     <option value="PVC Edge Bands">PVC Edge Bands</option>
     <option value="Other / Not Listed">Other / Not Listed</option>
 </select>
-            >
+            <input
+    type="text"
+    class="other-product"
+    placeholder="Please specify the product you need"
+    style="display: none;"
+>
 
         </div>
 
