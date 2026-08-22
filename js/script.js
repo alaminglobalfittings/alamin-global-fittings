@@ -203,10 +203,10 @@ ${address}
 *ORDER ITEMS*
 ${orderList}
 
-*ADDITIONAL DETAILS*
-${details || "None"}
+${details ? `*ADDITIONAL DETAILS*
+${details}
 
-Please confirm availability, prices and delivery arrangements.
+` : ""}Please confirm availability, prices and delivery arrangements.
 
 Thank you.`;
 
