@@ -146,8 +146,11 @@ orderForm.addEventListener("submit", function (event) {
     const address =
         document.getElementById("address").value.trim();
 
-    const details =
-        document.getElementById("details").value.trim();
+    const detailsField =
+    document.getElementById("details");
+
+const details =
+    detailsField ? detailsField.value.trim() : "";
 
 
     const items =
