@@ -22,7 +22,7 @@ addItemButton.addEventListener("click", function () {
             
 <select class="item-name" required>
     <option value="">Select a product</option>
-    <option value="MDF Board">MDF Board</option>
+    <option value="HDF&MDF Board">HDF&MDF Board</option>
     <option value="Plywood">Plywood</option>
     <option value="Floating Panels">Floating Panels</option>
     <option value="Drawer Runners">Drawer Runners</option>
@@ -127,6 +127,34 @@ function setupProductSelector(item) {
 }
 document.querySelectorAll(".order-item").forEach(function (item) {
     setupProductSelector(item);
+    // Select product automatically when coming from the Products page
+const selectedProduct =
+    new URLSearchParams(window.location.search).get("product");
+
+if (selectedProduct) {
+
+    const firstProductSelect =
+        document.querySelector(".order-item .item-name");
+
+    if (firstProductSelect) {
+
+        if (
+            [...firstProductSelect.options].some(
+                option => option.value === selectedProduct
+            )
+        ) {
+
+            firstProductSelect.value = selectedProduct;
+
+            firstProductSelect.dispatchEvent(
+                new Event("change")
+            );
+
+        }
+
+    }
+
+}
 });
 // Submit order
 orderForm.addEventListener("submit", function (event) {
