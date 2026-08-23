@@ -127,7 +127,10 @@ function setupProductSelector(item) {
 }
 document.querySelectorAll(".order-item").forEach(function (item) {
     setupProductSelector(item);
-    // Select product automatically when coming from the Products page
+    
+});
+
+// Select product automatically when coming from the Products page
 const selectedProduct =
     new URLSearchParams(window.location.search).get("product");
 
@@ -155,7 +158,6 @@ if (selectedProduct) {
     }
 
 }
-});
 // Submit order
 orderForm.addEventListener("submit", function (event) {
 
