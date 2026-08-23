@@ -344,6 +344,27 @@
         setupProductSelect(
             document.querySelector(".order-item")
         );
+        
+        // Automatically select product from Products page
+const selectedProduct =
+    new URLSearchParams(window.location.search).get("product");
+
+if (selectedProduct) {
+
+    const firstProductSelect =
+        document.querySelector(".order-item .item-name");
+
+    if (firstProductSelect) {
+
+        firstProductSelect.value = selectedProduct;
+
+        firstProductSelect.dispatchEvent(
+            new Event("change")
+        );
+
+    }
+
+}
 
 
         /*
